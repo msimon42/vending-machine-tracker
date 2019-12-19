@@ -1,5 +1,6 @@
 RSpec.describe 'when I visit a snack show page', type: :feature do
   before :each do
+    
     @owner = Owner.create(name: "Sam's Snacks")
     @machine_1 = @owner.machines.create(location: "Don's Mixed Drinks")
     @machine_2 = @owner.machines.create(location: "Turing Basement")
@@ -18,7 +19,7 @@ RSpec.describe 'when I visit a snack show page', type: :feature do
   end
 
   it 'can see machine info' do
-    expect(page).to have_content("#{@machine_1.location} (#{@machine_1.snack_count} kinds of snacks, avg price: #{@machine_1.avg_price})")
-    expect(page).to have_content("#{@machine_2.location} (#{@machine_2.snack_count} kinds of snacks, avg price: #{@machine_2.avg_price})")
+    expect(page).to have_content("Don's Mixed Drinks (2 kinds of snacks, avg price: $37.5)")
+    expect(page).to have_content("Turing Basement (2 kinds of snacks, avg price: $39.0)")
   end
 end
