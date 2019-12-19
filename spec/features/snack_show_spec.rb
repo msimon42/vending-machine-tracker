@@ -18,7 +18,7 @@ RSpec.describe 'when I visit a snack show page', type: :feature do
   end
 
   it 'can see machine info' do
-    expect(page).to have_content("#{@machine_1.name} (#{@machine_1.snack_count} kinds of snacks, avg price: #{@machine_1.avg_price})")
-    expect(page).to have_content("#{@machine_2.name} (#{@machine_2.snack_count} kinds of snacks, avg price: #{@machine_2.avg_price})")
+    expect(page).to have_content("#{@machine_1.location} (#{@machine_1.snack_count} kinds of snacks, avg price: #{@machine_1.avg_price})")
+    expect(page).to have_content("#{@machine_2.location} (#{@machine_2.snack_count} kinds of snacks, avg price: #{@machine_2.avg_price})")
   end
 end
