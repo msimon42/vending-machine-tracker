@@ -6,7 +6,7 @@ RSpec.describe Machine, type: :model do
     it { should belong_to :owner }
   end
 
-  descrbe 'methods' do
+  describe 'methods' do
     before :each do
       @owner = Owner.create(name: "Sam's Snacks")
       @machine_1 = @owner.machines.create(location: "Don's Mixed Drinks")
