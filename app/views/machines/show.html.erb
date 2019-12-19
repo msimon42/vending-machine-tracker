@@ -3,7 +3,7 @@
 <h2>Snacks belonging to this machine</h2>
 <ul>
 <% @snacks.each do |snack| %>
-  <li>Name: <%= snack.name %> Price: $<%= snack.price %></li>
+  <li><%= snack.name %>: $<%= snack.price %></li>
 <% end %>
 </ul>
 Average Price: $<%= @machine.avg_price %>
