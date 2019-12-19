@@ -16,8 +16,8 @@ RSpec.describe 'when I visit a machine show page', type: :feature do
 
     expect(page).to have_content('Chocolate Delight')
     expect(page).to have_content('Candy Surprise')
-    expect(page).to not_have_content('Mr. Waffle')
+    expect(page).to have_no_content('Mr. Waffle')
 
-    expect(page).to have_content(@machine_1.avg_price)
+    expect(page).to have_content("$#{@machine_1.avg_price}")
   end
 end
